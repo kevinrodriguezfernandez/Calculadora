@@ -58,6 +58,7 @@ namespace Calculadora.ForeachLoop
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 22);
             this.txtName.TabIndex = 2;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // txtSurname
             // 
@@ -65,6 +66,7 @@ namespace Calculadora.ForeachLoop
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(100, 22);
             this.txtSurname.TabIndex = 3;
+            this.txtSurname.TextChanged += new System.EventHandler(this.txtSurname_TextChanged);
             // 
             // Save
             // 

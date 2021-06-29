@@ -49,5 +49,15 @@ namespace Calculadora.ForeachLoop
                 
             }
         }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSurname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
