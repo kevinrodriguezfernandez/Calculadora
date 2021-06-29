@@ -1,5 +1,6 @@
 ﻿using Calculadora.ForeachLoop;
 using Calculadora.ForLoop;
+using Calculadora.WhileLoop;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace Calculadora
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmForLoop());
+            Application.Run(new frmWhile());
         }
     }
 }
