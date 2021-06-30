@@ -27,23 +27,21 @@ namespace Calculadora.WhileLoop
             student.Surname = txtSurname.Text;
             student.Age = Convert.ToInt32(txtAge.Text);
 
-            var students = new Dictionary<int, Student>();
+            var students = new Dictionary<Guid, Student>();
 
-            students.Add(student.StudentId, student);
+            students.Add(student.Guid, student);
 
             int i = 0;
             while (i < students.Count)
             {
-                KeyValuePair<int, Student> entry = students.ElementAt(i);
+                KeyValuePair<Guid, Student> entry = students.ElementAt(i);
 
                 if (entry.Value.Name.Equals("pepe"))
                 {
                     // en vez de un Console.Write.Line hacemos un message box
                     MessageBox.Show("Pepe is found " + ": " + entry.Value.Name +
-                        " is welcome");
+                        " is welcome, and his Guid is " + entry.Value.Guid.ToString());
                 }
-
-
                 i++;
             }
 
