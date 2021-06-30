@@ -8,6 +8,7 @@ namespace Calculadora.ForeachLoop
 {
     public class Student
     {
+        public Guid Guid { get; set; }  //codigo unico de cada instancia de la clase.
         public int StudentId { get; set; } //esto por debajo lee y escribe en la variable privada.
         public String Name { get; set; } // ya me hace el getter y el setter
 
@@ -15,11 +16,24 @@ namespace Calculadora.ForeachLoop
 
         public int Age { get; set; }
 
+        //Stiatic variable that must be initialized at run time.
+        //static means shared
+        public static int STUDENT_COUNTER; //Shared entre todos los objetos creados de la clase
+
+        //Static constructor is called at most one time, before any
+        // instance constructor is invoked or member is accessed.
+        static Student()
+        {
+            STUDENT_COUNTER = 0;
+        }
         public Student()
         {
+            STUDENT_COUNTER += 1;
+            Guid = Guid.NewGuid();
         }
 
-        public Student(int studentId, string name, string surname, int age)
+        //si le pasase algun parametro al this tendria que hacer otro constructor
+        public Student(int studentId, string name, string surname, int age) : this() 
         {
             StudentId = studentId;
             Name = name;

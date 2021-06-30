@@ -41,6 +41,7 @@ namespace Calculadora.ForLoop
                 //Unboxing-Polymorphism
                 MessageBox.Show(studentList[i].Name + " " + studentList[i].Surname);
             }
+            MessageBox.Show("el numero de estudiantes es: " + Student.STUDENT_COUNTER);
             
         }
 
